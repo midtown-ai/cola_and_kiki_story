@@ -32,9 +32,10 @@ BOOK.pages.forEach((page, index) => {
   `
 });
 
+// read tag prevents to click on link!
 html += `
   <div class="page" id="end">
-    <div class="end-text"><span class="do-NOT-read">If unlike Colah,<br> you are curious about the midtown AI club,<br> check out <a href="https://www.midtown.ai">midtown.ai</a><br> or email <a href="mailto:ai4jls@midtown.ai">ai4jls@midown.ai</a></span></div>
+    <div class="end-text"><span class="read">If unlike Colah, you are curious about the midtown AI club,<br> check out <a href="https://www.midtown.ai">www.midtown.ai</a> or email <a href="mailto:ai4jls@midtown.ai">ai4jls@midown.ai</a></span></div>
   </div>
 `
 
@@ -70,7 +71,8 @@ const hidePages = () => {
 
 // Clean up text to make it readable by removing HTML tags
 const htmlToReadableText = (html) => {
-  let r = html.replace(/(<br[^>]*>)/ig, '\n');
+  let r = html.replace(/(<br[^>]*>)/ig, '\n');     // <br>
+  r.replace(/(<[^>]*>)/ig, ' ');                   // <....>
   r.replace(/,/g, ' ');
   return r
 }
