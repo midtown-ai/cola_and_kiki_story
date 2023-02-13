@@ -35,7 +35,7 @@ BOOK.pages.forEach((page, index) => {
 // read tag prevents to click on link!
 html += `
   <div class="page" id="end">
-    <div class="end-text"><span class="read">If unlike Colah, you are curious about the midtown AI club,<br> check out <a href="https://www.midtown.ai">www.midtown.ai</a> or email <a href="mailto:ai4jls@midtown.ai">ai4jls@midown.ai</a></span></div>
+    <div class="end-text"><span class="read">If unlike Colah, you are curious about the midtown AI club,<br> email ai4jls@midown.ai</span></div>
   </div>
 `
 
@@ -72,7 +72,7 @@ const hidePages = () => {
 // Clean up text to make it readable by removing HTML tags
 const htmlToReadableText = (html) => {
   let r = html.replace(/(<br[^>]*>)/ig, '\n');     // <br>
-  r.replace(/(<[^>]*>)/ig, ' ');                   // <....>
+  // r.replace(/(<[^>]*>)/ig, ' ');                   // <....>
   r.replace(/,/g, ' ');
   return r
 }
@@ -135,6 +135,10 @@ const interactEvent = (event) => {
   if (transitioning) return
   if (!introShown) return
 
+  // if (currentPage ==== endEl) return
+  // if (currentPage ==== 1000) return
+  // of remove read call in end-page element
+
   const hitMiddle = event.clientX > window.innerWidth / 5 &&
     event.clientX < window.innerWidth - window.innerWidth / 5
   if (hitMiddle) {
@@ -176,6 +180,7 @@ const interactEvent = (event) => {
     if (currentPage < 1000) {
       currentPage++
       if (currentPage >= BOOK.pages.length) {
+	// currentPage is the end page!
         currentPage = 1000;
       }
     } else {
