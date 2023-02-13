@@ -34,7 +34,7 @@ BOOK.pages.forEach((page, index) => {
 
 html += `
   <div class="page" id="end">
-    <div class="end-text"><span class="read">The End</span></div>
+    <div class="end-text"><span class="read">If unlike Colah, you are curious about the midtown AI club, check out https://www.midtown.ai or email ai4jls@midtown.ai</span></div>
   </div>
 `
 
