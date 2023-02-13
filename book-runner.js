@@ -34,7 +34,7 @@ BOOK.pages.forEach((page, index) => {
 
 html += `
   <div class="page" id="end">
-    <div class="end-text"><span class="read">If unlike Colah,<br> you are curious about the midtown AI club,<br> check out <a href="https://www.midtown.ai">midtown.ai</a><br> or email <a href="mailto:ai4jls@midtown.ai">ai4jls@midown.ai</a></span></div>
+    <div class="end-text"><span class="do-NOT-read">If unlike Colah,<br> you are curious about the midtown AI club,<br> check out <a href="https://www.midtown.ai">midtown.ai</a><br> or email <a href="mailto:ai4jls@midtown.ai">ai4jls@midown.ai</a></span></div>
   </div>
 `
 
@@ -68,6 +68,7 @@ const hidePages = () => {
   });
 };
 
+// Clean up text to make it readable by removing HTML tags
 const htmlToReadableText = (html) => {
   let r = html.replace(/(<br[^>]*>)/ig, '\n');
   r.replace(/,/g, ' ');
@@ -139,6 +140,8 @@ const interactEvent = (event) => {
       synth.cancel()
     }
     currentlyReading = true;
+
+    // extract what to read from the DOM element
     const pageText = Array.prototype.slice.call(currPageEl.querySelectorAll('.read'))
       .map((el) => el.innerHTML)
       .join('\n\n');
