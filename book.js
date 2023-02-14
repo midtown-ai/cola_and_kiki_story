@@ -3,7 +3,7 @@ window.BOOK = {
   cover: {
     title: 'Cola the Koala',
     subtitle: 'Cola, Kiki, and the AI club',
-    author: 'ChatGTP and @midtown_ai',
+    author: 'ChatGPT and @midtown_ai',
     illustrator: 'SD, SD Midjourney, Dall-e and @midtown_ai',
   },
   pages: [
