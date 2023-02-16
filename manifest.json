@@ -1,7 +1,7 @@
 { 
-  "name": "Colah the Koala: AI children's book", 
-  "short_name": "Colah the Koala", 
-  "start_url": "https://ai-book-colah.tarwin.art/#start",
+  "name": "Cola the Koala: An AI-generated book", 
+  "short_name": "Cola the Koala", 
+  "start_url": "https://cola.midtown.ai/#start",
   "display": "standalone", 
   "icons": [{ 
     "src": "/img/icon.png", 
