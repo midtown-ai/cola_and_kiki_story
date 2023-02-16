@@ -35,7 +35,7 @@ BOOK.pages.forEach((page, index) => {
 // read tag prevents to click on link!
 html += `
   <div class="page" id="end">
-    <div class="end-text"><span class="read">If unlike Cola, you are curious about the AI club, email us at <br>ai4all@midtown.ai</span></div>
+    <div class="end-text"><span class="read">If unlike Cola, you are curious about the AI club, email us at <br>ai4jls@midtown.ai</span></div>
   </div>
 `
 
