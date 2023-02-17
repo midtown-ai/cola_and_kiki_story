@@ -17,6 +17,7 @@ html += `
     <div class="subtitle"><span class="read">${BOOK.cover.subtitle}</span></div>
     <div class="author"><span class="read">Written by ${BOOK.cover.author}</span></div>
     <div class="illustrator"><span class="read">Illustrations by ${BOOK.cover.illustrator}</span></div>
+    <div class="illustrator"><span class="NO-read">Version ${BOOK.cover.version}</span></div>
     <div class="loading-wrapper">
       <div class="loading-indicator"></div>  
     </div>

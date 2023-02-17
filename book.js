@@ -5,6 +5,7 @@ window.BOOK = {
     subtitle: 'Cola, Kiki, and the AI club',
     author: 'ChatGPT and @midtown_ai',
     illustrator: 'SD, SD Midjourney, Dall-e and @midtown_ai',
+    version: '0.0.1',
   },
   pages: [
     { images: ['1-1.webp'], textPosition: 'bottom', text: `Once upon a time in the land down under, there was a sleepy little Koala named Cola. All Cola wanted to do was climb up into her eucalyptus tree and take a nice, long nap.` },
